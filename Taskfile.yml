@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+  WILL_DO: true
+
+tasks:
+  default:
+    cmds:
+      - nu --help
+    silent: true
+    desc: show nushell help
+
+  cp_config:
+    cmds:
+      - nu cp_config.nu
+    desc: cp config files for nushell into repo directory.
+    interactive: true
+
+  cp_and_push:
+    deps:
+      - cp_config
+    cmds:
+      - git log
+      - git show
+    desc: cp nu config, then push changes to remote.
+    #interactive: false
+    requires:
+      - {{.WILL_DO}}

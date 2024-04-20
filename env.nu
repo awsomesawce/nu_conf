@@ -4,7 +4,7 @@
 
 #oh-my-posh init nu
 
-const completionsDir = "~/_completions"
+const completionsDir = "C:/Users/Carl/_completions"
 
 # Get cheatsheet from cht.sh
 def chtsh [q: string ] {

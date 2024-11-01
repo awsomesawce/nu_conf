@@ -27,5 +27,5 @@ tasks:
       - git show
     desc: cp nu config, then push changes to remote.
     #interactive: false
-    requires:
-      - {{.WILL_DO}}
+    #requires:
+    #  - "WILL_DO"
